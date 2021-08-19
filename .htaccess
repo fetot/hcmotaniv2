@@ -1,0 +1,10 @@
+ErrorDocument 404 /hcmotaniv2/404.php
+ErrorDocument 401 /hcmotaniv2/401.php
+ErrorDocument 500 /hcmotaniv2/500.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+</IfModule>
